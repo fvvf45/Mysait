@@ -1,0 +1,158 @@
+/* Общие стили */
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background: linear-gradient(135deg, #7fedd9, #9face6);
+    color: #333;
+}
+
+/* Заголовок */
+header {
+    text-align: center;
+    background: #1f1d1d;
+    padding: 15px;
+    color: white;
+}
+
+/* Навигация */
+nav ul {
+    list-style: none;
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    padding: 0;
+    margin: 0;
+    gap: 10px;
+}
+
+nav li {
+    margin: 0;
+}
+
+/* Стили кнопок навигации */
+nav a {
+    display: inline-block;
+    text-decoration: none;
+    padding: 12px 20px;
+    background: #323232;
+    color: white;
+    border-radius: 10px;
+    text-align: center;
+    font-size: 16px;
+    font-weight: bold;
+    border: 2px solid white;
+    transition: 0.3s;
+}
+
+nav a:hover {
+    background: rgba(255, 255, 255, 0.3);
+}
+
+/* Контейнеры для секций */
+section {
+    text-align: center;
+    background: white;
+    border-radius: 15px;
+    padding: 20px;
+    margin: 20px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+/* Таблица в резюме */
+table {
+    width: 80%;
+    margin: 20px auto;
+    border-collapse: collapse;
+    text-align: left;
+}
+
+th, td {
+    border: 1px solid #ddd;
+    padding: 10px;
+}
+
+th {
+    background: #323232;
+    color: white;
+}
+
+/* Фотогалерея */
+.gallery {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 10px;
+    justify-content: center;
+    padding: 20px;
+}
+
+.gallery img {
+    width: 100%;
+    height: auto;
+    border-radius: 10px;
+    border: 3px solid white;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    transition: transform 0.3s ease;
+}
+
+.gallery img:hover {
+    transform: scale(1.05);
+}
+
+/* Блок личных качеств (овал) */
+.qualities {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 15px;
+    padding: 20px;
+}
+
+.qualities div {
+    background: #ffffff;
+    padding: 15px 20px;
+    border-radius: 30px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+    font-weight: bold;
+}
+
+/* Подвал */
+footer {
+    text-align: center;
+    padding: 15px;
+    background: #1f1d1d;
+    color: white;
+}
+
+/* Адаптивный дизайн */
+@media (max-width: 600px) {
+    /* Навигация: кнопки в колонку с одинаковым размером */
+    nav ul {
+        flex-direction: column;
+        align-items: center;
+        gap: 10px;
+    }
+
+    nav li {
+        width: 100%;
+        max-width: 280px;
+    }
+
+    nav a {
+        width: 100%;
+        display: block;
+        padding: 12px;
+        text-align: center;
+    }
+}
+
+@media (max-width: 400px) {
+    section {
+        padding: 15px;
+        margin: 10px;
+    }
+
+    .gallery {
+        grid-template-columns: repeat(4, 1fr);
+    }
+}
